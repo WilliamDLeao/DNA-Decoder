@@ -11,15 +11,16 @@ Projeto que identifica a maior cadeia de códons de uma faixa de DNA.
 O programa funciona em 4 etapas:<br>
 -1: Na classe Decoder é especificado quais sequências de nucleotídios são válidas <br>
 -2: O input.dat fornece a sequência de DNA <br>
--3: A sequencia de DNA é dividida em trios (nucleotídios) <br>
--4: Trios inválidos ou grupos de 2 nucleotídios não podem ser considerados. Portanto, o que vale são os nucleotídios da etapa 1 em sequência. Como resultado, tem-se a maior cadeia válida. <br>
+-3: A sequencia de DNA é analisada por trios (já que os nucleotídios são 3 letras) <br>
+-4: Trios inválidos ou grupos de 2 nucleotídios não podem ser considerados. Portanto, o que vale são os nucleotídios especificados na etapa 1, em sequência. Como resultado, tem-se a maior cadeia válida. <br>
 Em pseudocódigo:
    ```bash
     Do início da cadeia de DNA até o fim-3, indo de trio em trio:
         a cadeiaAtual recebe os 3 nucleotídios
-            se estiverem na lista de códons aceitos, a cadeiaAtual os mantém e loop segue
-            senão, caso o tamanho da cadeiaAtual for maior que o da maior sequencia de nucleotídios, a maior sequencia se torna a cadeiaAtual. CadeiaAtual é esvazeada para o próximo loop
-        se a cadeiaAtual for maior que a maior cadeia, a maior cadeia recebe a tual
+            se estiverem na lista de códons aceitos, a cadeiaAtual os mantém, a posição é guardada e loop segue
+            senão, caso o tamanho da cadeiaAtual for maior que o da maior sequencia de nucleotídios, a maior sequencia se torna a cadeiaAtual. CadeiaAtual é esvazeada para o próximo loop e a posição guardada é alterada
+        se a cadeiaAtual for maior que a maior cadeia, a maior cadeia recebe a atual
+        exibir a posição da maior cadeia, caso ela exista
         RETORNE a maior cadeia de nucleotídios
     
    ```  
