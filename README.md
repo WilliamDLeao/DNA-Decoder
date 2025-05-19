@@ -26,12 +26,12 @@ Em pseudocódigo:
    ```  
 ---
 ## **Custo Computacional** 
-A função de maior custo para o algoritmo é o for(O(n)). Outras funções, como o find, tem custo equivalente ao tamanho da lista de códons permitidos, que é sempre fixa e será tratada como constante - e portanto, desconsiderada na análise. As comparações e atribuições tem custo O(1) e por isso serão desconsideradas. Tem-se, então, que para esse algoritmo encaixa-se na classe linear de custo no pior caso. Já no melhor caso, o custo será equivalente ao constante(O(1)).
+A função de maior custo para o algoritmo é o for(O(n)). Outras funções, como o find, tem custo equivalente ao tamanho da lista de códons permitidos, que é de tamanho m. Portanto, seu custo total será O(m x n). As comparações e atribuições tem custo O(1) e por isso serão desconsideradas. Tem-se, então, que para esse algoritmo encaixa-se na classe linear de custo no pior caso. Já no melhor caso, o custo será equivalente ao constante(O(1)).
 | Caso        | Custo  |
 |:----------------:|:---------------:|
 | **Melhor caso** | `O(1)`        |
-| **Caso médio**  | `O(n)`        |
-| **Pior caso**   | `O(n)`    |
+| **Caso médio**  | `O(n x m)`        |
+| **Pior caso**   | `O(n x m)`    |
 ---
 
 ## **Execução**  
